@@ -5,9 +5,12 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 # APLICAÇÃO SQLITE
-#conn = sqlite3.connect('database.db')
-#conn.execute('CREATE TABLE CADASTRO (USER_NAME TEXT, USER_EMAIL TEXT, USER_ADDRESS TEXT)')
-#conn.close()
+n = 0
+while n == 0:    
+    conn = sqlite3.connect('database.db')
+    conn.execute('CREATE TABLE CADASTRO (USER_NAME TEXT, USER_EMAIL TEXT, USER_ADDRESS TEXT)')
+    conn.close()
+    n += 1
 
 # CONTROLLERS
 @app.route('/')
