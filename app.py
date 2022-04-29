@@ -5,9 +5,9 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 # APLICAÇÃO SQLITE
-conn = sqlite3.connect('database.db')
-conn.execute('CREATE TABLE CADASTRO (USER_NAME TEXT, USER_EMAIL TEXT, USER_ADDRESS TEXT)')
-conn.close()
+#conn = sqlite3.connect('database.db')
+#conn.execute('CREATE TABLE CADASTRO (USER_NAME TEXT, USER_EMAIL TEXT, USER_ADDRESS TEXT)')
+#conn.close()
 
 # CONTROLLERS
 @app.route('/')
